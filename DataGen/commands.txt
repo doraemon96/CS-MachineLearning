@@ -1,0 +1,44 @@
+IMPORTANTE!!!!:
+
+-- EJERCICIOS A y B --
+En bash:
+> gcc ejercicio_a.c -lm
+o
+> gcc ejercicio_b.c -lm
+y
+> ./a.out 2 200 0.75
+o
+> ./a.out 4 2000 2.0
+
+En R:
+> f <- read.csv("dat_a.data", header=FALSE)
+> f1 <- subset(f, f$V3 == 0)
+> f2 <- subset(f, f$V3 == 1)
+> jpeg('a_plot.jpg')
+> plot(f1$V1, f1$V2, col="red", xlim=c(-3,3), ylim=c(-3,3))
+> points(f2$V1, f2$V2, col="green")
+> dev.off()
+y
+> f <- read.csv("dat_b.data", header=FALSE)
+> f1 <- subset(f, f$V3 == 0)
+> f2 <- subset(f, f$V3 == 1)
+> jpeg('b_plot.jpg')
+> plot(f1$V1, f1$V2, col="red", xlim=c(-3,3), ylim=c(-3,3))
+> points(f2$V1, f2$V2, col="green")
+> dev.off()
+
+
+
+-- SPIRALS --
+En bash:
+> gcc ejercicio_c.c -lm
+> ./a.out 10000
+
+En R:
+> f <- read.csv("dat_c.data", header=FALSE)
+> f1 <- subset(f, f$V3 == 0)
+> f2 <- subset(f, f$V3 == 1)
+> jpeg('spiralplot.jpg')
+> plot(f1$V1, f1$V2, col="red", xlim=c(-1,1), ylim=c(-1,1))
+> points(f2$V1, f2$V2, col="green")
+> dev.off()
