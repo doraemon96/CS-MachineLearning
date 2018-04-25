@@ -31,6 +31,13 @@ void generate_names (char* name, int d)
     for(i='a'; i <= 'z' && i < (d+'a'); i++){
         fprintf(f,"%c: continuous.\n", (char)i);
     }
+    if(i < (d+'a')){ //Need MOAR
+        int j = 'a';
+        while((i-'a')+(j-'a') < d){
+            fprintf(f,"a%c: continuous.\n", (char)j);
+            j++;
+        }
+    }
 }
 
 /* ejercicio_b
